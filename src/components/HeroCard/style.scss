@@ -1,0 +1,47 @@
+@import "@/styles/base/variables.scss";
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $black;
+  border-radius: 0 0 17px 0;
+  width: calc(100% / 2 - 10px);
+
+  @media screen and (min-width: $bk-md) {
+    width: calc(100% / 4 - 10px);
+  }
+
+  @media screen and (min-width: $bk-lg) {
+    width: calc(100% / 7 - 10px);
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__detail {
+    position: relative;
+    width: 100%;
+    &__divider {
+      position: absolute;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    h3 {
+      color: $white;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    img {
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+    }
+  }
+}
