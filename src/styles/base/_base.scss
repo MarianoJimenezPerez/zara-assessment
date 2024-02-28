@@ -1,0 +1,32 @@
+@import "./variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+  color: $black;
+  background-color: $white;
+  font-weight: 400;
+  font-size: 14px;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @media screen and (min-width: $bk-sm) {
+    max-width: 90%;
+  }
+
+  @media screen and (min-width: $bk-md) {
+    max-width: 80%;
+  }
+
+  @media screen and (min-width: $bk-lg) {
+    max-width: 75%;
+  }
+}
