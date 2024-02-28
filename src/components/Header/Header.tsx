@@ -3,7 +3,7 @@ import MarvelLogo from "@/assets/marvel_logo.svg";
 import HeartIconRed from "@/assets/heart_icon_red.svg";
 import "./style.scss";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header__wrapper container">
