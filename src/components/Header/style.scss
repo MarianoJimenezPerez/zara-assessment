@@ -1,0 +1,22 @@
+@import "@/styles/base/variables.scss";
+.header {
+  background-color: $black;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header__favs {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      span {
+        color: $white;
+        font-size: 16px;
+      }
+    }
+  }
+}

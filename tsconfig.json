@@ -7,8 +7,9 @@
     "skipLibCheck": true,
 
     /* path */
+    "types": ["node"],
     "paths": {
-      "@/*": ["./src"]
+      "@/*": ["./src/*"]
     },
 
     /* Bundler mode */
