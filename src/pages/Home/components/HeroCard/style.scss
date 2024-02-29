@@ -3,10 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: $black;
   border-radius: 0 0 17px 0;
+  overflow: hidden;
   width: calc(100% / 2 - 10px);
-
   @media screen and (min-width: $bk-md) {
     width: calc(100% / 4 - 10px);
   }
@@ -14,18 +13,31 @@
   @media screen and (min-width: $bk-lg) {
     width: calc(100% / 7 - 10px);
   }
+
   &__img {
     width: 100%;
+    height: 80%;
     img {
       width: 100%;
+      height: 100%;
+      aspect-ratio: 1;
       display: block;
     }
   }
   &__detail {
+    background-color: $black;
     position: relative;
     width: 100%;
+    height: 20%;
     &__divider {
       position: absolute;
+      width: 100%;
+      background-color: $red;
+      height: 3px;
+      transition: height 0.2s;
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
     display: flex;
     justify-content: space-between;
@@ -37,11 +49,18 @@
       font-weight: 400;
       text-transform: uppercase;
       font-size: 14px;
+      z-index: 2;
     }
     img {
       width: 12px;
       height: 12px;
       cursor: pointer;
+      z-index: 2;
+    }
+  }
+  &:hover {
+    .hero-card__detail__divider {
+      height: 100%;
     }
   }
 }
