@@ -1,22 +1,32 @@
+import { useHeroContext } from "@/hooks/useHeroContext";
 import "./style.scss";
 
-import CoverExample from "@/assets/cover_example.jpg";
 import HeartIcon from "@/assets/heart_icon.svg";
+import HeartIconRed from "@/assets/heart_icon_red.svg";
+import { Thumbnail } from "@/types";
 
-const Cover: React.FC = () => {
+interface CoverProps {
+  name: string;
+  description: string;
+  id: number;
+  thumbnail: Thumbnail;
+}
+
+const Cover: React.FC<CoverProps> = ({ name, description, id, thumbnail }) => {
+  const { favHeroes, setAndToggleFavHeroes } = useHeroContext();
+  const isFav = !!favHeroes.find((el) => el === id);
   return (
     <div className="cover">
       <article className="cover__wrapper">
-        <img src={CoverExample} alt="" />
+        <img src={`${thumbnail.path}.${thumbnail.extension}`} alt={name} />
         <div className="cover__wrapper__desc">
-          <h1>ADAM WARLOCK</h1>
-          <p>
-            Created by the Enclave to be part of a race of super humans who
-            would abolish war, illness, and crime, Adam Warlock is a unique
-            being who uses his immense and formidable powers to safeguard the
-            universe.
-          </p>
-          <img src={HeartIcon} alt="" />
+          <h1>{name}</h1>
+          <p>{description}</p>
+          <img
+            src={isFav ? HeartIconRed : HeartIcon}
+            alt="Heart icon"
+            onClick={() => setAndToggleFavHeroes(id)}
+          />
         </div>
       </article>
     </div>
