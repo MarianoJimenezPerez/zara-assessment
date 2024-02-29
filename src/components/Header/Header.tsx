@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header__wrapper container">
-        <Link to={"/"}>
+        <Link to={"/"} onClick={() => setShowFav(() => false)}>
           <img src={MarvelLogo} alt="Marvel logo" />
         </Link>
         <button
