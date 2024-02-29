@@ -15,6 +15,7 @@ const Header: React.FC = () => {
         <button
           className="header__favs"
           onClick={() => setShowFav((prev) => !prev)}
+          data-testid="vitest-button-fav"
         >
           <img src={HeartIconRed} alt="Heart icon" />
           <span>{favHeroes.length}</span>

@@ -9,7 +9,7 @@ const HeroList: React.FC = () => {
     ? heroes
     : heroes.filter((hero) => favHeroes.includes(hero.id));
   return (
-    <ul className="hero-list">
+    <ul className="hero-list" data-testid="vitest-hero-list">
       {filteredHeroes.length > 0 &&
         filteredHeroes.map((hero) => (
           <HeroCard
