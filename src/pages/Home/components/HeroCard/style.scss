@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-radius: 0 0 17px 0;
+  clip-path: polygon(100% 0, 100% 95%, 93% 100%, 0 100%, 0 0);
   overflow: hidden;
   width: calc(100% / 2 - 10px);
   @media screen and (min-width: $bk-md) {

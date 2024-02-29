@@ -4,7 +4,11 @@
   height: max-content;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0 0 50px 0;
+  clip-path: polygon(100% 0, 100% 95%, 93% 100%, 0 100%, 0 0);
+  @media screen and (min-width: $bk-md) {
+    clip-path: polygon(100% 0, 100% 92%, 98% 100%, 0 100%, 0 0);
+  }
+
   &__wrapper {
     width: 100%;
     margin: 0 auto;
