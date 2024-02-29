@@ -1,0 +1,14 @@
+.comic-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 180px;
+  h4 {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  span {
+    font-size: 12px;
+  }
+}
